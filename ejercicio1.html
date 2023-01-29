@@ -1,0 +1,30 @@
+<!--Ejercicio Serie Fibonacci-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos-ejercicio1.css" />
+    <title>Serie Fibonacci</title>
+</head>
+<body>
+    <div class="div-content">
+        <label class="title-sf">Ingrese el numero de la serie Fibonacci</label>
+        <input name="inputnumDeElementos1" type="number" id="inputnumDeElementos" class="input-sf"/> 
+        <button onclick="serieFibonacci()" class="btn-sf">Consultar serie Fibonacci</button>
+        <label class="label-sf">El resultado se imprime por consola</label>
+    </div>    
+</body>
+    <script>
+        function serieFibonacci() {
+            var numeroDeElementos = document.getElementById('inputnumDeElementos').value;
+            const arregloSerie = [0, 1];
+            for (let x = 2; x <= numeroDeElementos; x++){
+                arregloSerie[x] = arregloSerie[x - 1]+arregloSerie[x - 2]
+            }
+            console.log("Limite a imprimir:", numeroDeElementos)
+            console.log("Arreglo con serie Fibonacci:", arregloSerie)
+        }
+    </script>
+</html>
