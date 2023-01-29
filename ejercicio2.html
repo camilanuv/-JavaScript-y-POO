@@ -1,1 +1,39 @@
 <!--Ejercicio arreglos-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenamiento</title>
+</head>
+<body>
+    <script>
+        var arreglo = [true, 100, 'false', 4, 'Bienvenido', 45, 'Carpeta',10, 'POO'];
+        let nuevoArray = [ ];
+
+        function obtenerLosNumbers(arreglo) {
+            for (let i = 0; i < arreglo.length; i++) {
+                if (typeof arreglo[i] === 'number'){
+                    nuevoArray.push(arreglo[i])
+                }
+            }
+            return nuevoArray;
+        }
+
+        function ordenarArray(nuevoArray){
+            for (let i = 0; i < nuevoArray.length; i++) {
+            for (let j = 0; j < i; j++) {
+                if (nuevoArray[i] < nuevoArray[j]) {
+                    let temporal = nuevoArray[i];
+                    nuevoArray[i] = nuevoArray[j];
+                    nuevoArray[j] = temporal;
+                }
+            }
+            }
+            return nuevoArray;
+        }    
+        console.log("Final Array:", obtenerLosNumbers(arreglo), ordenarArray(nuevoArray))
+    </script>
+</body>
+</html>
